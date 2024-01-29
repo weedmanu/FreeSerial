@@ -14,3 +14,8 @@
 ### A faire :
 
 Compléter les commandes AT et les infos associées
+
+### Aperçu:
+![Terminal 1](img/1.png "Terminal 1")
+![Terminal 1 et 2](img/2.png "Terminal 1 et 2")
+![Commande AT, Terminal 1 et 2](img/3.png "Commande AT, Terminal 1 et 2")
