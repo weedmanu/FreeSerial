@@ -9,9 +9,10 @@
 - **serial.tools.list_ports**  pour lister les port utilisés      (pip install serial-tool)
 
 ### Ligne 7:  
+Si vous voulez l'icon de l'application, if faut modifier la ligne
 **mon_icon = "~/Desktop/FreeSerial/img/th.ico" remplacer par votre chemin** 
 
-### A faire :
+### A finir :
 
 Compléter les commandes AT et les infos associées
 
