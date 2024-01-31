@@ -30,18 +30,28 @@ command_BT = [
 ]
 # On créer une liste des commandes AT pour le LoraE5  
 command_LoraE5 = [
-    "AT", 
-    "AT+VER", 
-    "AT+ID", 
-    "AT+TEMP", 
-    "AT+VDD", 
-    "AT+RTC", 
-    "AT+RTC=FULL", 
-    "AT+CH=NUM", 
-    "AT+WDT", 
-    "AT+MODE=TEST" , 
-    "AT+TEST=?", 
-    "AT+TEST=STOP"
+    "AT",
+    "AT+VER",
+    "AT+ID",
+    "AT+TEMP",
+    "AT+VDD",
+    "AT+RTC",
+    "AT+RTC=FULL",
+    "AT+RTC=\"2024-01-30 11:49:11\"",
+    "AT+RTC=ZONE",
+    "AT+RTC=ZONE, \"+01:00\"",
+    "AT+WDT",
+    "AT+CH=NUM",
+    "AT+CH=2, OFF",
+    "AT+CH=2, ON",
+    "AT+LOG=DEBUG",
+    "AT+LOG=QUIET",
+    "AT+MODE?",
+    "AT+MODE=TEST",
+    "AT+TEST=?",
+    "AT+TEST=RFCFG,866,SF12,125,12,15,14,ON,OFF,OFF",
+    "AT+TEST=TXLRSTR, \"Salut\"", 
+    "AT+TEST=RXLRPKT",
 ]
 # On créer une liste des infos des commandes AT pour le Bluetooth
 infos_command_BT = [
@@ -60,18 +70,28 @@ infos_command_BT = [
 ]
 # On créer une liste des infos des commandes AT pour le LoraE5
 infos_command_LoraE5 = [
-    "Statut, utiliser pour tester si la connexion du module est OK.", 
-    "Version du firmware", 
+    "Utiliser pour tester si la connexion du module est OK.",
+    "Demande la version du firmware.",
     "Retourne le : DevAddr, DevEui et AppEui", 
-    "Température du module(peu précis)", 
-    "Tension d'alimentation", 
-    "Temps depuis le démarrage, commence à 2000-01-01 00:00:00",
-    "Temps complet, timezone, timestamp, ms depuis la mise sous tension",
-    "Liste les canaux utilisés",
-    "WatchDog actif ou pas",
-    "Passe en mode test",
-    "Vérifie si on est on mode test et affiche la config du module sinon : erreur -12", 
-    "Sort du mode test",
+    "Demande la température détectée (précision d'environ +/-5°C dans le pire des cas).",
+    "Demande la tension d'alimentation.",
+    "Demande le temps du modem LoRaWAN. Lorsque le modem est sous tension, il démarre toujours à partir de 2000-01-01 00:00:00.",
+    "Demande le temps complet du modem LoRaWAN. date heure, timezone, timestamp, temps en seconde depuis la mise sous tension.",
+    "Configure une nouvelle date/heure",
+    "Demande le fuseau horaire.",
+    "Pour configurer la fuseau horaire.",
+    "Demande l'état du chien de garde, il est activé par défaut,  ceci améliorera la stabilité du module, en particulier dans des conditions électromagnétiques sévères.",
+    "Demande les canaux actuellement activées.",
+    "Demande de désactivé le canal 2.",
+    "Demande d'activé le canal 2.",
+    "Demande d'activé le journal, il est destinée au débogage de l'utilisateur, le modem AT renvoie un supplément d'infos. Plusieurs mode debug : DEBUG INFO WARN ERROR FATAL PANIC QUIET. Le journal est désactivé par défaut (QUIET).",
+    "Demande de désactivé le journal.",
+    "Demande dans quel mode on est. (LWABP par défaut, LWOTAA ou TEST) ", 
+    "Demande de passer en mode TEST.",
+    "Demande si on est en mode TEST et retourne la config RF.",
+    "Pour configurer la RF (adapter les paramètres selon vos souhait)",
+    "Pour envoyer un message",
+    "Pour passer en mode réception"
 ]
 
 command_device = command_LoraE5         # par défaut la liste des commandes est celle du LoraE5
