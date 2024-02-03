@@ -14,7 +14,7 @@ Si vous voulez l'icon de l'application, if faut modifier la ligne
 
 ### A finir :
 
-Compléter les commandes AT et les infos associées
+Compléter les commandes AT et les infos associées du BT
 
 ### Aperçu:
 ![Terminal 1](img/1.png "Terminal 1")
