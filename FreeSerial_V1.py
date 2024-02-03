@@ -287,4 +287,3 @@ while True:
         
 #si on sort de la boucle on ferme l'application
 window.close()
-exit()
